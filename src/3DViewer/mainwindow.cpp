@@ -442,7 +442,9 @@ void MainWindow::record_gif_file() {
     gif->save(save_ptr);
     close_file();
     delete gif;
+    delete timer;
     gif = nullptr;
+    timer = nullptr;
   }
 }
 
