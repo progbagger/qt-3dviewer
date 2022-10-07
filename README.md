@@ -18,5 +18,7 @@ To build this application on your PC you will need next packages and libraries:
 ## Tests
 
 To run functional tests you will need **check** framework library for **C** language.
+
 To run style and other tests you will need **clang-format** and **cppcheck** executables.
+
 For creating code coverage report you will need **lcov** package.
