@@ -1,0 +1,33 @@
+.code {
+  background-color: rgb(222, 222, 222);
+  border-radius: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.wrapper {
+  padding: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 50px;
+  border: 5px;
+  border-color: black;
+  border-radius: 30px;
+  background-color: rgb(231, 231, 231);
+  box-shadow: 0px 0px 50px 2px rgba(0, 0, 0, 0.47);
+}
+
+hr {
+  border-radius: 2px;
+  color: black;
+  background-color: black;
+}
+
+p,
+ul {
+  margin-left: 20px;
+}
