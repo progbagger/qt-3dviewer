@@ -17,7 +17,7 @@ To build this application on your PC you will need next packages and libraries:
 - **gcc** and **g++** **C/C++** compilers
 - packages **libgl1-mesa-dev** and **libglu1-mesa-dev** on **Linux**
 
-Makefile essential targets:
+### Makefile essential targets:
 
 - `make install` will create **App** folder where will be situated an executable of application
 - `make uninstall` will delete this folder
