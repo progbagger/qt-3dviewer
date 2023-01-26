@@ -1,0 +1,105 @@
+:root {
+  --background-color: #DDBEAA;
+  --wrapper-background-color: #E5E3E4;
+  --href-hover-color: #5BA199;
+  --tab-color: var(--background-color);
+  --come-color-4: #469597;
+  --lexem-background-color: #BBC6C8;
+}
+
+* {
+  font-family: 'Fira Code', monospace;
+  text-align: justify;
+}
+
+p {
+  text-indent: 40px;
+}
+
+hr {
+  border-width: 1px;
+  background-color: black;
+  border-color: black;
+  border-radius: 2px;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  color: var(--href-hover-color);
+}
+
+.title>img {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+a:active {
+  text-decoration: none;
+  color: var(--lexem-background-color)
+}
+
+.disabled-href {
+  pointer-events: none;
+  text-decoration: none;
+}
+
+.contents {
+  font-weight: bold;
+}
+
+.wrapper,
+.nav-panel {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--wrapper-background-color);
+  border-radius: 25px;
+}
+
+.shadow {
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 25px;
+  box-shadow: 0px 80px 100px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper {
+  border-radius: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.lexem {
+  background-color: var(--lexem-background-color);
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 2px;
+  font-weight: bold;
+}

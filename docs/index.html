@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>3DViewer 2.0</title>
+</head>
+
+<body>
+  <div class="shadow">
+    <!-- Тело -->
+    <div class="wrapper">
+      <div class="title">
+        <h1>3dViewer 2.0</h1>
+        <img src="../src/assets/icon.png">
+      </div>
+      <hr>
+      <h2>Оглавление</h2>
+      <ol>
+        <li><a href="#common">Общее</a></li>
+        <li><a href="#files">Открытие файлов</a></li>
+        <li><a href="#customization">Перемещение модели и задание цвета её элементам</a></li>
+        <li><a href="#gifs">Создание gif-анимаций</a></li>
+        <li><a href="#saving">Сохранение изображений</a></li>
+      </ol>
+      <hr>
+      <h2 id="common">1. Общее</h2>
+      <p>Данная программа предназначена для визуализирования <strong>Object</strong> файлов с расширением
+        <span class="lexem">.obj</span>. Визуализируются
+        только вершины и полигоны, образуя множество точек и линий между ними - <strong>рёбер</strong>.
+      </p>
+      <p>Имеется ряд настраиваемых параметров:
+      <ul>
+        <li>стиль точек
+          <ul>
+            <li>отсутствуют</li>
+            <li>окружности</li>
+            <li>квадраты</li>
+          </ul>
+        <li>радиус точек</li>
+        <li>цвет точек</li>
+        <li>стиль линий
+          <ul>
+            <li>сплошной</li>
+            <li>пунктирный</li>
+          </ul>
+        </li>
+        <li>радиус линий</li>
+        <li>цвет линий</li>
+        <li>цвет фона</li>
+        </li>
+        <li>угол поворота по оси <span class="code">X</span></li>
+        <li>угол поворота по оси <span class="code">Y</span></li>
+        <li>угол поворота по оси <span class="code">Z</span></li>
+        <li>перемещение по оси <span class="code">oX</span></li>
+        <li>перемещение по оси <span class="code">oY</span></li>
+        <li>перемещение по оси <span class="code">oZ</span></li>
+        <li>масштабирование модели</li>
+        <li>переключение перспективы</li>
+      </ul>
+      </p>
+      <h2 id="files">2. Открытие файлов</h2>
+      <p>Программой поддерживается открытие только файлов с расширением <span class="lexem">.obj</span>. Чтобы
+        открыть
+        файл, необходимо выбрать соответствующий пункт меню и кнопку <strong>"Open file"</strong></span>.</p>
+      <p>Цвета, размеры вершин и линий, их стили и перспектива восстанавливаются при перезапуске приложения.</p>
+      <h2 id="customization">3. Перемещение модели и задание цвета её элементам</h2>
+      <p>В графическом интерфейсе программы предусмотрены различные "слайдеры" и выпадающие меню с выбором
+        стилей точек или линий.</p>
+      <p>Задать цвет точкам, рёбрам или фону возможно благодаря кнопкам в правой части окна программы во вкладке
+        <strong>Settings</strong>.
+      </p>
+      <p>Для перемещения модели предусмотрены слайдеры во вкладке <strong>Transform</strong>. Таким
+        образом, можно либо потянуть модель мышью, либо двигать слайдеры. ПКМ в окне просмотра позволяет воздействовать
+        на ось вращения
+        oZ. СКМ в окне просмотра позволяет переместить модель по осям oY и oX, а с зажатой <span
+          class="lexem">Shift</span> по осям oX и oZ.
+      </p>
+      <p>Вращение колесиком мыши позволяет менять масштаб модели.</p>
+      <h2 id="gifs">4. Создание gif-анимаций</h2>
+      <p>Для создания .gif-изображения нужно выбрать пункт меню <strong>Save as</strong> и выбрать пункт
+        подменю <strong>.gif</strong>. После записи анимации Вам будет предложено выбрать путь к сохраняемому файлу.
+        Запись ведётся 5 секунд.</p>
+      <h2 id="saving">5. Сохранение изображений</h2>
+      <p>Для сохранения изображения текущего состояние 3D-модели нужно выбрать пункт меню <strong>Save as</strong>.
+        Сохранить можно в двух форматах: <strong>.jpeg</strong> и <strong>.bmp</strong>.
+        После выбора нужного пункта меню откроется диалоговое окно с выбором пути и имени файла.</p>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -17,7 +17,7 @@ To build this application on your PC you will need next packages and libraries:
 - **gcc** and **g++** **C/C++** compilers
 - packages **libgl1-mesa-dev** and **libglu1-mesa-dev** on **Linux**
 
-### Makefile essential targets:
+### Makefile essential targets
 
 - `make install` will create **App** folder where will be situated an executable of application
 - `make uninstall` will delete this folder
@@ -29,8 +29,8 @@ So, to create an executable and clean all junk just run `make install clean`.
 
 ## Tests
 
-To run functional tests you will need **check** framework library for **C** language.
+To run functional tests you will need **gtest** framework library for **C++** language.
 
-To run style and other tests you will need **clang-format** and **cppcheck** executables.
+To run style and other tests you will need **clang-format** and **valgrind** on Linux, **leaks** on MacOS executables.
 
 For creating code coverage report you will need **lcov** package.

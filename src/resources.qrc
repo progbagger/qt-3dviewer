@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+  <file alias="vertex.glsl">shaders/vertex.glsl</file>
+  <file alias="fragment.glsl">shaders/fragment.glsl</file>
+  <file alias="lemonmilk.otf">fonts/lemonmilk.otf</file>
+  <file alias="icon">assets/icon.png</file>
+</qresource>
+</RCC>
