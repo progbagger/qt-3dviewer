@@ -95,6 +95,7 @@ void Parser::ParseFacet(const std::string& line) {
     Figure::IndexType index;
     reader >> index;
     if (reader.fail() || index < 1 || index > sizes_.first) {
+      if (reader.eof()) break;
       delete figure_;
       figure_ = nullptr;
       return;

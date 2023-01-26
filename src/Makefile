@@ -191,4 +191,5 @@ clean:
 	@rm -rf $(DIR_REPORT)
 	@rm -rf ../build*
 	@rm -rf $(APP_NAME) $(APP_NAME).tar
+	@rm -rf *.dSYM
 	@echo ' done'
