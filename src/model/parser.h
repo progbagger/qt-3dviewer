@@ -2,6 +2,7 @@
 #define MODEL_PARSER_H_
 
 #include <fstream>
+#include <iostream>
 #include <sstream>
 
 #include "figure.h"
