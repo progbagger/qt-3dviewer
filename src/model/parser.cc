@@ -32,6 +32,7 @@ Figure* Parser::GetFigureByPath(const std::string& path) {
   Figure* prev_figure = figure_;
   figure_ =
       new Figure(path, sizes_.first, sizes_.second, 0, sizes_.second * 10);
+  sizes_.first = 0UL;
   ParseFile(file);
   if (figure_) {
     delete prev_figure;
@@ -61,9 +62,11 @@ void Parser::ParseFile(std::ifstream& file) {
   while (figure_ && !file.eof()) {
     std::string line;
     std::getline(file, line);
+    std::cout << line << std::endl;
     bool is_fail = file.fail();
     if (is_fail) return;
     if (IsVertexLine(line)) {
+      ++sizes_.first;
       ParseVertex(line);
     } else if (IsFacetLine(line)) {
       ParseFacet(line);
@@ -89,24 +92,28 @@ void Parser::ParseVertex(const std::string& line) {
 void Parser::ParseFacet(const std::string& line) {
   std::stringstream reader(line);
   reader.ignore(2);  // skipping "f "
-  Figure::IndexType start = 0;
+  int start = 0;
   unsigned facet_size = 0;
   while (!reader.eof()) {
-    Figure::IndexType index;
+    int index = 1;
     reader >> index;
-    if (reader.fail() || index < 1 || index > sizes_.first) {
-      if (reader.eof()) break;
+    // handling relative positions
+    if (index < 0) index = (int)sizes_.first + index + 1;
+    if (reader.fail() || !index || (Figure::IndexType)index > sizes_.first) {
+      if (reader.eof() && !(!index || (Figure::IndexType)index > sizes_.first))
+        break;
       delete figure_;
       figure_ = nullptr;
       return;
     }
     if (start == 0) start = index;
-    figure_->AppendFacetIndex(index, facet_size);
+    figure_->AppendFacetIndex((Figure::IndexType)index, facet_size);
     figure_->IncreaseEdgesCount();
     ++facet_size;
-    while (reader.peek() != ' ' && !reader.eof()) reader.ignore(1);
+    while ((reader.peek() != ' ' && reader.peek() != '\t') && !reader.eof())
+      reader.ignore(1);
   }
-  figure_->LoopFacet(start, facet_size);
+  figure_->LoopFacet((Figure::IndexType)start, facet_size);
 }
 
 }  // namespace model
